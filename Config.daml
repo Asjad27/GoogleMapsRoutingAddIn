@@ -1,4 +1,5 @@
-﻿<ArcGIS defaultAssembly="GoogleMapsRoutingAddIn.dll" defaultNamespace="GoogleMapsRoutingAddIn" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="GoogleMapsRoutingAddIn.dll" defaultNamespace="GoogleMapsRoutingAddIn" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
   <AddInInfo id="{3c39f0c0-264f-4e66-b0e5-bc3c9fe95587}" version="1.0" desktopVersion="2.8.29751">
     <Name>GoogleMapsRoutingAddIn</Name>
     <Description>GoogleMapsRoutingAddIn description</Description>
@@ -10,16 +11,16 @@
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
   </AddInInfo>
-	<categories>
-		<updateCategory refID="esri_cef_customSchemes">
-			<insertComponent id="GoogleMapsRoutingAddIn_Custom_ResourceHandler" className="GoogleMapsRoutingAddIn.Custom.ImageResourceSchemeHandler">
-				<content SchemeName="resource" />
-			</insertComponent>
-			<insertComponent id="GoogleMapsRoutingAddIn_Custom_ResourceHandler2" className="GoogleMapsRoutingAddIn.Custom.EmbeddedResourceSchemeHandler">
-				<content SchemeName="embeddedresource" IsCSPBypassing="true" />
-			</insertComponent>
-		</updateCategory>
-	</categories>
+  <categories>
+    <updateCategory refID="esri_cef_customSchemes">
+      <insertComponent id="GoogleMapsRoutingAddIn_Custom_ResourceHandler" className="GoogleMapsRoutingAddIn.Custom.ImageResourceSchemeHandler">
+        <content SchemeName="resource" />
+      </insertComponent>
+      <insertComponent id="GoogleMapsRoutingAddIn_Custom_ResourceHandler2" className="GoogleMapsRoutingAddIn.Custom.EmbeddedResourceSchemeHandler">
+        <content SchemeName="embeddedresource" IsCSPBypassing="true" />
+      </insertComponent>
+    </updateCategory>
+  </categories>
   <modules>
     <insertModule id="GoogleMapsRoutingAddIn_Module" className="Module1" autoLoad="false" caption="Module1">
       <!-- uncomment to have the control hosted on a separate tab-->
@@ -34,7 +35,7 @@
         <group id="GoogleMapsRoutingAddIn_Group1" caption="GoogleMapsRouting" appearsOnAddInTab="true">
           <!-- host controls within groups -->
           <tool refID="GoogleMapsRoutingAddIn_GoogleMapsRouting" size="large" />
-		</group>
+        </group>
       </groups>
       <controls>
         <!-- add your controls here -->
@@ -42,11 +43,11 @@
           <tooltip heading="GoogleMapsRouting AddIn">Click on any two points on the map to find the route between them using Google Maps<disabledText /></tooltip>
         </tool>
       </controls>
-		<panes>
-			<pane id="GoogleMapsRoutingAddIn_UI_ChromePane" caption="ChromePane" className="GoogleMapsRoutingAddIn.UI.ChromePaneViewModel" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonGreen16.png" defaultTab="esri_mapping_homeTab" defaultTool="esri_mapping_navigateTool">
-				<content className="GoogleMapsRoutingAddIn.UI.ChromePaneView" />
-			</pane>
-		</panes>
+      <panes>
+        <pane id="GoogleMapsRoutingAddIn_UI_ChromePane" caption="ChromePane" className="GoogleMapsRoutingAddIn.UI.ChromePaneViewModel" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonGreen16.png" defaultTab="esri_mapping_homeTab" defaultTool="esri_mapping_navigateTool">
+          <content className="GoogleMapsRoutingAddIn.UI.ChromePaneView" />
+        </pane>
+      </panes>
     </insertModule>
   </modules>
 </ArcGIS>
